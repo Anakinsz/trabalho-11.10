@@ -7,16 +7,62 @@
     <title>Gerenciador de Treinos e Dietas</title>
 </head>
 <body>
-    <h1> Treinos e dietas </h1>
+    <header>
+        <h1>TecNutri</h1>
+    <nav>
+            <a href="">Início</a>
+            <a href="">Sobre</a>
+            <a href="">Serviços</a>
+            <a href="">Contato</a>
+    </nav>
+    </header>
     <p> Mude seu corpo totalmente de forma efetiva com a gente.</p>
     <p> Faça agora seu cadastro com a gente, prometo que será rápido tanto quanto seus resultados.</p>
-
     <div class="container">
         <img src="/foto01.webp" alt="Foto do treino" class="photo">
         <div id="registration-area"></div>
     </div>
-
-    <div id="popup" class="modal">
+    <div class="form-container">
+        <form id="cadastroForm">
+            <label for="objetivo">Qual é o seu objetivo?</label>
+            <select id="objetivo" name="objetivo">
+                <option value="">Escolha uma opção</option>
+                <option value="emagrecer">Emagrecer</option>
+                <option value="manterPeso">Manter Peso</option>
+                <option value="ganharMassa">Ganhar Massa Muscular</option>
+            </select>
+    
+            <label for="peso">Peso (Kg):</label>
+            <input type="number" id="peso" name="peso" placeholder="Digite aqui seu peso atual">
+    
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura" name="altura" step="0.01" placeholder="Digite aqui sua altura">
+    
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento">
+    
+            <label for="sexo">Sexo:</label>
+            <div>
+                <input type="radio" id="feminino" name="sexo" value="feminino">
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="masculino" name="sexo" value="masculino">
+                <label for="masculino">Masculino</label>
+            </div>
+    
+            <label for="metaPeso">Meta de Peso (Kg):</label>
+            <input type="number" id="metaPeso" name="metaPeso" placeholder="Insira seu peso">
+    
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Qual seu nome?">
+    
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Qual seu e-mail?">
+    
+            <button type="submit">Comece já!</button>
+        </form>
+    </div>
+    
+    <div id="popup" class="modal">xx
         <div class="modal-content">
             <span class="close" id="close-popup">&times;</span>
             <h2>Pré-venda de Encapsulados</h2>
@@ -24,7 +70,6 @@
             <button id="learn-more">Saiba Mais</button>
         </div>
     </div>
-
     <script src="/extension.js"></script>
     <script src="script.js"></script>
 </body>

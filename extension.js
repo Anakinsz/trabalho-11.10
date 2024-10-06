@@ -13,8 +13,6 @@ window.onload = function() {
     // Código do pop-up
     const popup = document.getElementById("popup");
     const closePopup = document.getElementById("close-popup");
-
-    // Mostra o pop-up ao carregar a página
     popup.style.display = "block";
 
     // Fecha o pop-up ao clicar no "x"
@@ -28,10 +26,30 @@ window.onload = function() {
             popup.style.display = "none";
         }
     };
-
-    // Exemplo de ação para o botão "Saiba Mais"
-    document.getElementById("learn-more").onclick = function() {
+    document.getElementById("saibamais").onclick = function() {
         alert("Você será redirecionado para mais informações.");
-        // Aqui você pode adicionar um redirecionamento para outra página ou algo mais
+        
     };
 };
+document.getElementById('cadastroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const objetivo = document.getElementById('objetivo').value;
+    const peso = document.getElementById('peso').value;
+    const altura = document.getElementById('altura').value;
+    const nascimento = document.getElementById('nascimento').value;
+    const sexo = document.querySelector('input[name="sexo"]:checked').value;
+    const metaPeso = document.getElementById('metaPeso').value;
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    console.log({
+        objetivo,
+        peso,
+        altura,
+        nascimento,
+        sexo,
+        metaPeso,
+        nome,
+        email
+    });
+    alert("Formulário enviado com sucesso!");
+});
