@@ -1,14 +1,3 @@
-window.onload = function() {
-    const registrationArea = document.getElementById('registration-area');
-    const textarea = document.createElement('textarea');
-    textarea.placeholder = "Escreva seu cadastro aqui...";
-    registrationArea.appendChild(textarea);
-};
-window.onload = function() {
-    const registrationArea = document.getElementById('registration-area');
-    const textarea = document.createElement('textarea');
-    textarea.placeholder = "Escreva seu cadastro aqui...";
-    registrationArea.appendChild(textarea);
 
     // Código do pop-up
     const popup = document.getElementById("popup");
@@ -30,7 +19,7 @@ window.onload = function() {
         alert("Você será redirecionado para mais informações.");
         
     };
-};
+
 document.getElementById('cadastroForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const objetivo = document.getElementById('objetivo').value;
